@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaPrincipal.Formularios.Cadastros;
+using SistemaPrincipal.Formularios.Modulos.Administrador;
 
 namespace SistemaPrincipal.Formularios
 {
@@ -141,5 +142,11 @@ namespace SistemaPrincipal.Formularios
             }
         }
 
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frm = new FrmUsuario();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

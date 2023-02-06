@@ -39,6 +39,8 @@ namespace SistemaPrincipal.Formularios
             this.mnStripFuncoes = new System.Windows.Forms.MenuStrip();
             this.menuCadastros = new System.Windows.Forms.ToolStripMenuItem();
             this.menuModelos = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAdministrador = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProcessos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRelatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUtilitarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +54,7 @@ namespace SistemaPrincipal.Formularios
             this.menuRestaurarMinimizadas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFecharTodas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.stStripPrincipal.SuspendLayout();
             this.mnStripFuncoes.SuspendLayout();
             this.SuspendLayout();
@@ -111,7 +114,9 @@ namespace SistemaPrincipal.Formularios
             // menuCadastros
             // 
             this.menuCadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuModelos});
+            this.menuModelos,
+            this.toolStripMenuItem1,
+            this.menuAdministrador});
             this.menuCadastros.Image = global::SistemaPrincipal.Properties.Resources.icons8_signing_a_document_32;
             this.menuCadastros.Name = "menuCadastros";
             this.menuCadastros.Size = new System.Drawing.Size(87, 20);
@@ -120,9 +125,24 @@ namespace SistemaPrincipal.Formularios
             // menuModelos
             // 
             this.menuModelos.Name = "menuModelos";
-            this.menuModelos.Size = new System.Drawing.Size(120, 22);
+            this.menuModelos.Size = new System.Drawing.Size(180, 22);
             this.menuModelos.Text = "Modelos";
             this.menuModelos.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
+            // 
+            // menuAdministrador
+            // 
+            this.menuAdministrador.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuUsuarios});
+            this.menuAdministrador.Name = "menuAdministrador";
+            this.menuAdministrador.Size = new System.Drawing.Size(180, 22);
+            this.menuAdministrador.Text = "Adminstrador";
+            // 
+            // menuUsuarios
+            // 
+            this.menuUsuarios.Name = "menuUsuarios";
+            this.menuUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.menuUsuarios.Text = "Usuários";
+            this.menuUsuarios.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // menuProcessos
             // 
@@ -231,6 +251,11 @@ namespace SistemaPrincipal.Formularios
             this.menuSair.Text = "&Sair";
             this.menuSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -280,6 +305,9 @@ namespace SistemaPrincipal.Formularios
         private System.Windows.Forms.ToolStripMenuItem menuMinimizarTodas;
         private System.Windows.Forms.ToolStripMenuItem menuFecharTodas;
         private System.Windows.Forms.ToolStripMenuItem menuRestaurarMinimizadas;
+        private System.Windows.Forms.ToolStripMenuItem menuAdministrador;
+        private System.Windows.Forms.ToolStripMenuItem menuUsuarios;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
 

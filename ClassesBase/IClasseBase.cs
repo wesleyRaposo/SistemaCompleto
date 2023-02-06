@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassesBase
 {
-    interface IBase
+    interface IClasseBase
     {
         public void LimparLista();
         public void AdicionarErroNaLista(string mensageDeErro);

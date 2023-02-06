@@ -32,8 +32,14 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.btnIncluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.pnlFundo.SuspendLayout();
             this.pnlRodape.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlFundo
+            // 
+            this.pnlFundo.Controls.Add(this.lblStatus);
             // 
             // pnlRodape
             // 
@@ -86,6 +92,22 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Black;
+            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(554, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblStatus.Size = new System.Drawing.Size(100, 23);
+            this.lblStatus.TabIndex = 17;
+            this.lblStatus.Text = "Status CRUD";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // FrmBaseCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -93,6 +115,9 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.ClientSize = new System.Drawing.Size(658, 392);
             this.Name = "FrmBaseCRUD";
             this.Text = "FrmBaseCRUD";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmBaseCRUD_KeyPress);
+            this.pnlFundo.ResumeLayout(false);
+            this.pnlFundo.PerformLayout();
             this.pnlRodape.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -103,5 +128,6 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         protected System.Windows.Forms.Button btnIncluir;
         protected System.Windows.Forms.Button btnExcluir;
         protected System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

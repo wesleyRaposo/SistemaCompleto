@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassesBase
 {
-    public abstract class ClasseBase: IBase
+    public abstract class ClasseBase: IClasseBase
     {
         #region constantes de erro
 
