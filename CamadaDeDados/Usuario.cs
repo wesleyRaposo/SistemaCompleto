@@ -149,7 +149,7 @@ namespace CamadaDeDados
 
         public override void CarregarPorCodigo(String codigo)
         {
-            cmd.CommandText = "SELECT * FROM TB_USUARIOS WHERE CODIGO = @codigo";
+            cmd.CommandText = "SELECT ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA FROM TB_USUARIOS WHERE CODIGO = @codigo";
             cmd.Parameters.AddWithValue("@codigo", codigo);
 
             try
@@ -161,10 +161,10 @@ namespace CamadaDeDados
                     this.Id = (int)dr.GetSqlInt32(0);
                     this.Codigo = dr.GetString(1);
                     this.Nome = dr.GetString(2);
-                    this.NomeSocial = dr.GetString(3);
+                    this.NomeSocial = !dr.IsDBNull(3) ? dr.GetString(3) : ""; //-Operador ternário. Campo pode vir null.
                     this.UsarNomeSocial = dr.GetString(4);
                     this.Email = dr.GetString(5);
-                    this.EmailRecuperacao = dr.GetString(6);
+                    this.EmailRecuperacao = !dr.IsDBNull(6) ? dr.GetString(6) : ""; //-Operador ternário. Campo pode vir null.
                     this.Senha = dr.GetString(7);
                 }
             }
@@ -253,8 +253,10 @@ namespace CamadaDeDados
         {
             if(ValidarInclusao())
             {
-                cmd.CommandText = "INSERT INTO TB_USUARIOS (ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILREC, SENHA) VALUES (@id, @codigo, @nome, @nomesocial, @usarsocial, @email, @emailrec, @senha)";
-                cmd.Parameters.AddWithValue("@id", this.GerarProximoId()); //this.Id
+                int proximoId = this.GerarProximoId(); //-Tem que ser executado primeiro, senão o método altera o "CommandText".
+
+                cmd.CommandText = "INSERT INTO TB_USUARIOS (ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA) VALUES (@id, @codigo, @nome, @nomesocial, @usarsocial, @email, @emailrec, @senha)";
+                cmd.Parameters.AddWithValue("@id", proximoId); //this.Id
                 cmd.Parameters.AddWithValue("@codigo", this.Codigo);
                 cmd.Parameters.AddWithValue("@nome", this.Nome);
                 cmd.Parameters.AddWithValue("@nomesocial", this.NomeSocial);
@@ -291,7 +293,7 @@ namespace CamadaDeDados
         {
             if (ValidarAlteracao())
             {
-                cmd.CommandText = "UPDATE TB_USUARIOS SET CODIGO = @codigo, NOME = @nome, NOMESOCIAL = @nomesocial, USARSOCIAL = @usarsocial, EMAIL = @email, EMAILREC = @emailrec, SENHA = @senha WHERE ID = @id";
+                cmd.CommandText = "UPDATE TB_USUARIOS SET CODIGO = @codigo, NOME = @nome, NOMESOCIAL = @nomesocial, USARSOCIAL = @usarsocial, EMAIL = @email, EMAILRECUPERACAO = @emailrec, SENHA = @senha WHERE ID = @id";
                 cmd.Parameters.AddWithValue("@codigo", this.Codigo);
                 cmd.Parameters.AddWithValue("@nome", this.Nome);
                 cmd.Parameters.AddWithValue("@nomesocial", this.NomeSocial);
@@ -327,7 +329,7 @@ namespace CamadaDeDados
 
         public override void Excluir()
         {
-            cmd.CommandText = "DELETE TB_USUARIOS WHERE ID = @id";
+            cmd.CommandText = "DELETE FROM TB_USUARIOS WHERE ID = @id";
             cmd.Parameters.AddWithValue("@id", this.Id);
 
             try

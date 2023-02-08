@@ -92,6 +92,8 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
                         break;
                     }
             }
+ 
+            lblStatusOperacao.Left = pnlFundo.Width - lblStatusOperacao.Width;
         }
 
         protected virtual bool PodeGravar() 

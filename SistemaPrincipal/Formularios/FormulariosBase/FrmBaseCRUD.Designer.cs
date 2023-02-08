@@ -86,7 +86,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.lblStatusOperacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblStatusOperacao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblStatusOperacao.ForeColor = System.Drawing.Color.White;
-            this.lblStatusOperacao.Location = new System.Drawing.Point(554, 1);
+            this.lblStatusOperacao.Location = new System.Drawing.Point(553, 1);
             this.lblStatusOperacao.Name = "lblStatusOperacao";
             this.lblStatusOperacao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblStatusOperacao.Size = new System.Drawing.Size(100, 23);
