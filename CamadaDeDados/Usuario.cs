@@ -65,9 +65,35 @@ namespace CamadaDeDados
             this.Senha = "";
         }
 
+        protected override int GerarProximoId()
+        {
+            cmd.CommandText = "SELECT COALESCE(MAX(ID)+1,1) FROM TB_USUARIOS";
+
+            try
+            {
+                cmd.Connection = _conexaoDeBanco.Conectar();
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    return (int)dr.GetSqlInt32(0);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            finally
+            {
+                cmd.Parameters.Clear();
+                cmd.Dispose();
+                dr.Close();
+                _conexaoDeBanco.Desconectar();
+            }
+        }
+
         public override int GerarProximoCodigo()
         {
-            cmd.CommandText = "SELECT MAX(CODIGO)+1 FROM TB_USUARIOS";
+            cmd.CommandText = "SELECT COALESCE(MAX(CODIGO)+1,1) FROM TB_USUARIOS";
 
             try
             {
@@ -227,8 +253,8 @@ namespace CamadaDeDados
         {
             if(ValidarInclusao())
             {
-                cmd.CommandText = "INSERT INTO TB_USUARIOS (CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILREC, SENHA) VALUES (@codigo, @nome, @nomesocial, @usarsocial, @email, @emailrec, @senha)";
-                //cmd.Parameters.AddWithValue("@id", this.Id);
+                cmd.CommandText = "INSERT INTO TB_USUARIOS (ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILREC, SENHA) VALUES (@id, @codigo, @nome, @nomesocial, @usarsocial, @email, @emailrec, @senha)";
+                cmd.Parameters.AddWithValue("@id", this.GerarProximoId()); //this.Id
                 cmd.Parameters.AddWithValue("@codigo", this.Codigo);
                 cmd.Parameters.AddWithValue("@nome", this.Nome);
                 cmd.Parameters.AddWithValue("@nomesocial", this.NomeSocial);

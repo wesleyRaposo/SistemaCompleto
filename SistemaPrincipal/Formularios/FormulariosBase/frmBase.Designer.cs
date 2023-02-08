@@ -31,8 +31,10 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.pnlFundo = new System.Windows.Forms.Panel();
+            this.pnlCentral = new System.Windows.Forms.Panel();
             this.pnlRodape = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.pnlFundo.SuspendLayout();
             this.pnlRodape.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,10 +46,19 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.pnlFundo.AutoScroll = true;
             this.pnlFundo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlFundo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlFundo.Controls.Add(this.pnlCentral);
             this.pnlFundo.Location = new System.Drawing.Point(0, 0);
             this.pnlFundo.Name = "pnlFundo";
             this.pnlFundo.Size = new System.Drawing.Size(658, 328);
             this.pnlFundo.TabIndex = 2;
+            // 
+            // pnlCentral
+            // 
+            this.pnlCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCentral.Location = new System.Drawing.Point(19, 28);
+            this.pnlCentral.Name = "pnlCentral";
+            this.pnlCentral.Size = new System.Drawing.Size(614, 276);
+            this.pnlCentral.TabIndex = 0;
             // 
             // pnlRodape
             // 
@@ -87,14 +98,18 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBase_FormClosed);
             this.Load += new System.EventHandler(this.frmBase_Load);
             this.Shown += new System.EventHandler(this.frmBase_Shown);
+            this.SizeChanged += new System.EventHandler(this.FrmBase_SizeChanged);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmBase_KeyPress);
+            this.pnlFundo.ResumeLayout(false);
             this.pnlRodape.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFechar;
         protected System.Windows.Forms.Panel pnlFundo;
         protected System.Windows.Forms.Panel pnlRodape;
+        protected System.Windows.Forms.Button btnFechar;
+        protected System.Windows.Forms.Panel pnlCentral;
     }
 }

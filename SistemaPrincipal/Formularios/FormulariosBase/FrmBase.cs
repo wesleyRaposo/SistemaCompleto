@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SistemaPrincipal.Formularios.FormulariosBase
 {
-    public partial class FrmBase : Form
+    public partial class FrmBase : Form, IFrmBase
     {
         
         public static int NumeroDajanela { get; private set; }
@@ -24,7 +24,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         public FrmBase()
         {
             InitializeComponent();
-            
+
             NumeroDajanela++;
         }
 
@@ -51,16 +51,67 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         }
                 
         private void frmBase_Shown(object sender, EventArgs e)
-        {
+        {          
             if (!this.DesignMode)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
+            ReposicionarControles();
         }
 
         private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
         {
             //NumeroDajanela--;
+        }
+
+        protected virtual void ReposicionarControles()
+        {
+            //-O reposicionamento de controles não deve ser chamado na criação dos componentes, pois pode provocar erros de referência nula.
+            // Idealmente ele deve ser invocados em eventos do forme, quando em sua exibição ou redimensionamento.
+            // Ele deve estar protegido pelo teste (!this.DesignMode) para não correr o crisco de provocar (ainda mais) problemas no mode de design.
+
+            if (!this.DesignMode)
+            {
+                int X = pnlRodape.Size.Width - btnFechar.Size.Width - 10;
+                int Y = (pnlRodape.Size.Height / 2) - (btnFechar.Size.Height / 2);
+                btnFechar.Location = new Point(X, Y);
+
+                int Xp = 0;
+                int Yp = 0;
+                if ((pnlCentral.Width < pnlFundo.Width) && (pnlCentral.Height < pnlFundo.Height))
+                {
+                    Xp = (pnlFundo.Width / 2) - (pnlCentral.Width / 2);
+                    Yp = (pnlFundo.Height / 2) - (pnlCentral.Height / 2);
+                }
+                else
+                if ((pnlCentral.Width < pnlFundo.Width) && (pnlCentral.Height > pnlFundo.Height))
+                {
+                    Xp = (pnlFundo.Width / 2) - (pnlCentral.Width / 2);
+                    Yp = 15;
+                }
+                else
+                if ((pnlCentral.Width > pnlFundo.Width) && (pnlCentral.Height < pnlFundo.Height))
+                {
+                    Xp = 15;
+                    Yp = (pnlFundo.Height / 2) - (pnlCentral.Height / 2);
+                }
+
+                pnlCentral.Location = new Point(Xp, Yp);
+            }
+        }
+
+        private void FrmBase_SizeChanged(object sender, EventArgs e)
+        {
+            ReposicionarControles();
+        }
+
+        private void FrmBase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+                SendKeys.Send("{tab}");
+            }
         }
     }
 }

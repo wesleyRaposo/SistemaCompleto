@@ -33,5 +33,18 @@ namespace Utilitarios
                 return true;
             }
         }
+
+        public static bool CharENumero(char key)
+        {
+            if (char.IsDigit(key))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

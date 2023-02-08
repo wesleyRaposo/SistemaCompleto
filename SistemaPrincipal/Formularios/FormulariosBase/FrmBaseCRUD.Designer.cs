@@ -29,61 +29,47 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         /// </summary>
         protected void InitializeComponent()
         {
-            this.btnIncluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblStatusOperacao = new System.Windows.Forms.Label();
             this.pnlFundo.SuspendLayout();
             this.pnlRodape.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFundo
             // 
-            this.pnlFundo.Controls.Add(this.lblStatus);
+            this.pnlFundo.Controls.Add(this.lblStatusOperacao);
+            this.pnlFundo.Controls.SetChildIndex(this.pnlCentral, 0);
+            this.pnlFundo.Controls.SetChildIndex(this.lblStatusOperacao, 0);
             // 
             // pnlRodape
             // 
             this.pnlRodape.Controls.Add(this.btnExcluir);
-            this.pnlRodape.Controls.Add(this.btnAlterar);
-            this.pnlRodape.Controls.Add(this.btnIncluir);
-            this.pnlRodape.Controls.SetChildIndex(this.btnIncluir, 0);
-            this.pnlRodape.Controls.SetChildIndex(this.btnAlterar, 0);
+            this.pnlRodape.Controls.Add(this.btnGravar);
+            this.pnlRodape.Controls.SetChildIndex(this.btnFechar, 0);
+            this.pnlRodape.Controls.SetChildIndex(this.btnGravar, 0);
             this.pnlRodape.Controls.SetChildIndex(this.btnExcluir, 0);
             // 
-            // btnIncluir
+            // btnGravar
             // 
-            this.btnIncluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnIncluir.Image = global::SistemaPrincipal.Properties.Resources.icons8_crie_um_novo_32;
-            this.btnIncluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncluir.Location = new System.Drawing.Point(11, 8);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(87, 43);
-            this.btnIncluir.TabIndex = 1;
-            this.btnIncluir.Text = "&Incluir";
-            this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIncluir.UseVisualStyleBackColor = true;
-            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAlterar.Image = global::SistemaPrincipal.Properties.Resources.icons8_editar_vários_32;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(113, 8);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(87, 43);
-            this.btnAlterar.TabIndex = 2;
-            this.btnAlterar.Text = "&Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGravar.Image = global::SistemaPrincipal.Properties.Resources.icons8_crie_um_novo_32;
+            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGravar.Location = new System.Drawing.Point(11, 8);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(87, 43);
+            this.btnGravar.TabIndex = 1;
+            this.btnGravar.Text = "&Gravar";
+            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExcluir.Image = global::SistemaPrincipal.Properties.Resources.icons8_excluir_lixeira_32;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(216, 8);
+            this.btnExcluir.Location = new System.Drawing.Point(123, 8);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 43);
             this.btnExcluir.TabIndex = 3;
@@ -92,21 +78,21 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // lblStatus
+            // lblStatusOperacao
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Black;
-            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(554, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblStatus.Size = new System.Drawing.Size(100, 23);
-            this.lblStatus.TabIndex = 17;
-            this.lblStatus.Text = "Status CRUD";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblStatusOperacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStatusOperacao.AutoSize = true;
+            this.lblStatusOperacao.BackColor = System.Drawing.Color.Black;
+            this.lblStatusOperacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblStatusOperacao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStatusOperacao.ForeColor = System.Drawing.Color.White;
+            this.lblStatusOperacao.Location = new System.Drawing.Point(554, 1);
+            this.lblStatusOperacao.Name = "lblStatusOperacao";
+            this.lblStatusOperacao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblStatusOperacao.Size = new System.Drawing.Size(100, 23);
+            this.lblStatusOperacao.TabIndex = 18;
+            this.lblStatusOperacao.Text = "Status CRUD";
+            this.lblStatusOperacao.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FrmBaseCRUD
             // 
@@ -115,6 +101,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.ClientSize = new System.Drawing.Size(658, 392);
             this.Name = "FrmBaseCRUD";
             this.Text = "FrmBaseCRUD";
+            this.Shown += new System.EventHandler(this.FrmBaseCRUD_Shown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmBaseCRUD_KeyPress);
             this.pnlFundo.ResumeLayout(false);
             this.pnlFundo.PerformLayout();
@@ -125,9 +112,8 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
 
         #endregion
 
-        protected System.Windows.Forms.Button btnIncluir;
+        protected System.Windows.Forms.Button btnGravar;
         protected System.Windows.Forms.Button btnExcluir;
-        protected System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Label lblStatus;
+        protected System.Windows.Forms.Label lblStatusOperacao;
     }
 }

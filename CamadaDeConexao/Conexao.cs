@@ -20,8 +20,8 @@ namespace CamadaDeConexao
         {
             try
             {
-               //con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\EstudoC#\Exercícios\SistemaCompleto\CamadaDeConexao\ProjetoDataBase.mdf;Integrated Security=True";
-               con.ConnectionString = ConfigurationManager.ConnectionStrings["DBTeste"].ConnectionString; //-A string de conexão foi movida para o App.config.
+               con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\EstudoC#\Exercícios\SistemaCompleto\CamadaDeConexao\ProjetoDataBase.mdf;Integrated Security=True";
+               //con.ConnectionString = ConfigurationManager.ConnectionStrings["DBTeste"].ConnectionString; //-A string de conexão foi movida para o App.config.
             }
             catch (Exception e)
             {

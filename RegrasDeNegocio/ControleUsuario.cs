@@ -134,7 +134,7 @@ namespace RegrasDeNegocio
             else
                 return true;
         }
-
+        
         public int GerarProximoCodigoDoCliente()
         {
             Usuario us = new Usuario(cnx);

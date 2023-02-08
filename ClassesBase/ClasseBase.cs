@@ -81,6 +81,7 @@ namespace ClassesBase
         }
 
         public abstract void Limpar();
+        protected abstract int GerarProximoId();
         public abstract int GerarProximoCodigo();
         public abstract void CarregarPorId(int id);
         public abstract void CarregarPorCodigo(String codigo);
