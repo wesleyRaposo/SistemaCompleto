@@ -62,7 +62,8 @@ namespace RegrasDeNegocio
             return usuario;
         }
 
-        public bool IncluirUsuario(String codigo, String nome, String nomeSocial, String usarSocial, String email, String emailRecuperacao, String senha, String senhaConfirmacao)
+        public bool IncluirUsuario(String codigo, String nome, String nomeSocial, String usarSocial, String email, String emailRecuperacao, String senha, String senhaConfirmacao,
+            String EnviarEmailCadastramento, String SolicitarConfirmacaoPorEmail)
         {
             Usuario us = new Usuario(cnx);
 
@@ -73,6 +74,8 @@ namespace RegrasDeNegocio
             us.Email = email;
             us.EmailRecuperacao = emailRecuperacao;
             us.Senha = senha;
+            us.EnviarEmailCadastramento = EnviarEmailCadastramento;
+            us.SolicitarConfirmacaoPorEmail = SolicitarConfirmacaoPorEmail;
 
             us.Incluir();
 
@@ -88,7 +91,8 @@ namespace RegrasDeNegocio
                 return true;
         }
 
-        public bool AtualizarUsuario(String Id, String codigo, String nome, String nomeSocial, String usarSocial, String email, String emailRecuperacao, String senha, String senhaConfirmacao)
+        public bool AtualizarUsuario(String Id, String codigo, String nome, String nomeSocial, String usarSocial, String email, String emailRecuperacao, String senha, String senhaConfirmacao,
+            String EnviarEmailCadastramento, String SolicitarConfirmacaoPorEmail)
         {
             Usuario us = new Usuario(cnx);
 
@@ -100,6 +104,8 @@ namespace RegrasDeNegocio
             us.Email = email;
             us.EmailRecuperacao = emailRecuperacao;
             us.Senha = senha;
+            us.EnviarEmailCadastramento = EnviarEmailCadastramento;
+            us.SolicitarConfirmacaoPorEmail = SolicitarConfirmacaoPorEmail;
 
             us.Atualizar();
 

@@ -20,8 +20,14 @@ namespace CamadaDeConexao
         {
             try
             {
-               con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\EstudoC#\Exercícios\SistemaCompleto\CamadaDeConexao\ProjetoDataBase.mdf;Integrated Security=True";
-               //con.ConnectionString = ConfigurationManager.ConnectionStrings["DBTeste"].ConnectionString; //-A string de conexão foi movida para o App.config.
+                //-Forma antiga de conexão. Os dados são fixos na aplicação.
+                //con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\EstudoC#\Exercícios\SistemaCompleto\CamadaDeConexao\ProjetoDataBase.mdf;Integrated Security=True";
+
+                //-Nova forma de conexão.
+                // Essa forma é flexível, pois o arquivo "App.config" é editável.
+                // Esse arquivo tem que ficar no projeto que inicializa a aplicação (no caso, o "SistemaPrincipal").
+                // Antes estava no projeto da camada de conexão e dava erro de objeto nulo ou não instanciado.
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["DBTeste"].ConnectionString;
             }
             catch (Exception e)
             {

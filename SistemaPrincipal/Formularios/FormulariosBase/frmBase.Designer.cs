@@ -99,7 +99,6 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.Load += new System.EventHandler(this.frmBase_Load);
             this.Shown += new System.EventHandler(this.frmBase_Shown);
             this.SizeChanged += new System.EventHandler(this.FrmBase_SizeChanged);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmBase_KeyPress);
             this.pnlFundo.ResumeLayout(false);
             this.pnlRodape.ResumeLayout(false);
             this.ResumeLayout(false);

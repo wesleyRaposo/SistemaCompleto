@@ -102,7 +102,6 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             this.Name = "FrmBaseCRUD";
             this.Text = "FrmBaseCRUD";
             this.Shown += new System.EventHandler(this.FrmBaseCRUD_Shown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmBaseCRUD_KeyPress);
             this.pnlFundo.ResumeLayout(false);
             this.pnlFundo.PerformLayout();
             this.pnlRodape.ResumeLayout(false);

@@ -36,9 +36,11 @@ namespace CamadaDeDados
         public String Email { get; set; }
         public String EmailRecuperacao { get; set; }
         public String Senha { get; set; }
+        public String EnviarEmailCadastramento { get; set; }
+        public String SolicitarConfirmacaoPorEmail { get; set; }
 
-        //Conexao cnx = new Conexao();
-        SqlCommand cmd = new SqlCommand();
+    //Conexao cnx = new Conexao();
+    SqlCommand cmd = new SqlCommand();
         SqlDataReader dr;
 
         private Usuario()
@@ -67,7 +69,8 @@ namespace CamadaDeDados
 
         protected override int GerarProximoId()
         {
-            cmd.CommandText = "SELECT COALESCE(MAX(ID)+1,1) FROM TB_USUARIOS";
+            cmd.CommandText = @"SELECT COALESCE(MAX(ID)+1,1) 
+                                FROM TB_USUARIOS";
 
             try
             {
@@ -93,7 +96,8 @@ namespace CamadaDeDados
 
         public override int GerarProximoCodigo()
         {
-            cmd.CommandText = "SELECT COALESCE(MAX(CODIGO)+1,1) FROM TB_USUARIOS";
+            cmd.CommandText = @"SELECT COALESCE(MAX(CODIGO)+1,1) 
+                                FROM TB_USUARIOS";
 
             try
             {
@@ -119,7 +123,9 @@ namespace CamadaDeDados
 
         public override void CarregarPorId(int id)
         {
-            cmd.CommandText = "SELECT * FROM TB_USUARIOS WHERE ID = @id";
+            cmd.CommandText = @"SELECT ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA, ENVIAREMAILCADASTRAMENTO, SOLICITARCONFIRMACAOEMAIL 
+                                FROM TB_USUARIOS 
+                                WHERE ID = @id";
             cmd.Parameters.AddWithValue("@id", id);
 
             try
@@ -136,6 +142,8 @@ namespace CamadaDeDados
                     this.Email = dr.GetString(5);
                     this.EmailRecuperacao = dr.GetString(6);
                     this.Senha = dr.GetString(7);
+                    this.EnviarEmailCadastramento = dr.GetString(8);
+                    this.SolicitarConfirmacaoPorEmail = dr.GetString(9);
                 }
             }
             finally
@@ -149,7 +157,9 @@ namespace CamadaDeDados
 
         public override void CarregarPorCodigo(String codigo)
         {
-            cmd.CommandText = "SELECT ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA FROM TB_USUARIOS WHERE CODIGO = @codigo";
+            cmd.CommandText = @"SELECT ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA, ENVIAREMAILCADASTRAMENTO, SOLICITARCONFIRMACAOEMAIL 
+                                FROM TB_USUARIOS 
+                                WHERE CODIGO = @codigo";
             cmd.Parameters.AddWithValue("@codigo", codigo);
 
             try
@@ -166,6 +176,8 @@ namespace CamadaDeDados
                     this.Email = dr.GetString(5);
                     this.EmailRecuperacao = !dr.IsDBNull(6) ? dr.GetString(6) : ""; //-Operador ternário. Campo pode vir null.
                     this.Senha = dr.GetString(7);
+                    this.EnviarEmailCadastramento = dr.GetString(8);
+                    this.SolicitarConfirmacaoPorEmail = dr.GetString(9);
                 }
             }
             finally
@@ -179,7 +191,9 @@ namespace CamadaDeDados
 
         public override bool VerificaExistenciaPorId(int id)
         {
-            cmd.CommandText = "SELECT COUNT(*) AS TOTAL FROM TB_USUARIOS WHERE ID = @id";
+            cmd.CommandText = @"SELECT COUNT(*) AS TOTAL 
+                                FROM TB_USUARIOS 
+                                WHERE ID = @id";
             cmd.Parameters.AddWithValue("@id", id);
 
             try
@@ -213,7 +227,9 @@ namespace CamadaDeDados
 
         public override bool VerificaExistenciaPorCodigo(String codigo)
         {
-            cmd.CommandText = "SELECT COUNT(*) AS TOTAL FROM TB_USUARIOS WHERE CODIGO = @codigo";
+            cmd.CommandText = @"SELECT COUNT(*) AS TOTAL 
+                                FROM TB_USUARIOS 
+                                WHERE CODIGO = @codigo";
             cmd.Parameters.AddWithValue("@codigo", codigo);
 
             try
@@ -255,7 +271,8 @@ namespace CamadaDeDados
             {
                 int proximoId = this.GerarProximoId(); //-Tem que ser executado primeiro, senão o método altera o "CommandText".
 
-                cmd.CommandText = "INSERT INTO TB_USUARIOS (ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA) VALUES (@id, @codigo, @nome, @nomesocial, @usarsocial, @email, @emailrec, @senha)";
+                cmd.CommandText = @"INSERT INTO TB_USUARIOS (ID, CODIGO, NOME, NOMESOCIAL, USARSOCIAL, EMAIL, EMAILRECUPERACAO, SENHA, ENVIAREMAILCADASTRAMENTO, SOLICITARCONFIRMACAOEMAIL) 
+                                                     VALUES (@id, @codigo, @nome, @nomesocial, @usarsocial, @email, @emailrec, @senha,  @enviaremailcadastramento, @solicitarconfirmacaoporemail)";
                 cmd.Parameters.AddWithValue("@id", proximoId); //this.Id
                 cmd.Parameters.AddWithValue("@codigo", this.Codigo);
                 cmd.Parameters.AddWithValue("@nome", this.Nome);
@@ -264,6 +281,8 @@ namespace CamadaDeDados
                 cmd.Parameters.AddWithValue("@email", this.Email);
                 cmd.Parameters.AddWithValue("@emailrec", this.EmailRecuperacao);
                 cmd.Parameters.AddWithValue("@senha", this.Senha);
+                cmd.Parameters.AddWithValue("@enviaremailcadastramento", this.EnviarEmailCadastramento);
+                cmd.Parameters.AddWithValue("@solicitarconfirmacaoporemail", this.SolicitarConfirmacaoPorEmail);
 
                 try
                 {
@@ -293,7 +312,16 @@ namespace CamadaDeDados
         {
             if (ValidarAlteracao())
             {
-                cmd.CommandText = "UPDATE TB_USUARIOS SET CODIGO = @codigo, NOME = @nome, NOMESOCIAL = @nomesocial, USARSOCIAL = @usarsocial, EMAIL = @email, EMAILRECUPERACAO = @emailrec, SENHA = @senha WHERE ID = @id";
+                cmd.CommandText = @"UPDATE TB_USUARIOS 
+                                    SET CODIGO = @codigo, NOME = @nome, 
+                                        NOMESOCIAL = @nomesocial, 
+                                        USARSOCIAL = @usarsocial, 
+                                        EMAIL = @email, 
+                                        EMAILRECUPERACAO = @emailrec, 
+                                        SENHA = @senha, 
+                                        ENVIAREMAILCADASTRAMENTO = @EnviarEmailCadastramento, 
+                                        SOLICITARCONFIRMACAOEMAIL = @SolicitarConfirmacaoPorEmail
+                                    WHERE ID = @id";
                 cmd.Parameters.AddWithValue("@codigo", this.Codigo);
                 cmd.Parameters.AddWithValue("@nome", this.Nome);
                 cmd.Parameters.AddWithValue("@nomesocial", this.NomeSocial);
@@ -301,6 +329,8 @@ namespace CamadaDeDados
                 cmd.Parameters.AddWithValue("@email", this.Email);
                 cmd.Parameters.AddWithValue("@emailrec", this.EmailRecuperacao);
                 cmd.Parameters.AddWithValue("@senha", this.Senha);
+                cmd.Parameters.AddWithValue("@EnviarEmailCadastramento", this.EnviarEmailCadastramento);
+                cmd.Parameters.AddWithValue("@SolicitarConfirmacaoPorEmail", this.SolicitarConfirmacaoPorEmail);
                 cmd.Parameters.AddWithValue("@id", this.Id);
 
                 try
@@ -329,7 +359,8 @@ namespace CamadaDeDados
 
         public override void Excluir()
         {
-            cmd.CommandText = "DELETE FROM TB_USUARIOS WHERE ID = @id";
+            cmd.CommandText = @"DELETE FROM TB_USUARIOS 
+                                WHERE ID = @id";
             cmd.Parameters.AddWithValue("@id", this.Id);
 
             try

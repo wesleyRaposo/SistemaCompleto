@@ -15,12 +15,6 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         
         public static int NumeroDajanela { get; private set; }
 
-        protected Boolean podeFechar()
-        {
-            //-Implementar nos forms herdados se for o caso.
-            return true;
-        }
-        
         public FrmBase()
         {
             InitializeComponent();
@@ -28,40 +22,11 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             NumeroDajanela++;
         }
 
-        private void frmBase_Load(object sender, EventArgs e)
+        #region Métodos a serem herdados.
+        protected Boolean podeFechar()
         {
-            if(!this.DesignMode)
-            {
-             //   this.WindowState = FormWindowState.Maximized;
-             //   this.FormBorderStyle = FormBorderStyle.None;
-             //   this.ShowIcon = false;    //-Na propriedade do form também funciona.
-             //   this.ControlBox = false;  //-Na propriedade do form também funciona.
-             //   this.MaximizeBox = false; //-Na propriedade do form também funciona.
-             //   this.MinimizeBox = false; //-Na propriedade do form também funciona.
-            }
-            this.Text = "Janela " + NumeroDajanela;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (podeFechar())
-            {
-                this.Close();
-            }       
-        }
-                
-        private void frmBase_Shown(object sender, EventArgs e)
-        {          
-            if (!this.DesignMode)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            ReposicionarControles();
-        }
-
-        private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //NumeroDajanela--;
+            //-Implementar nos forms herdados se for o caso.
+            return true;
         }
 
         protected virtual void ReposicionarControles()
@@ -100,18 +65,63 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             }
         }
 
+        #endregion
+
+
+        #region Eventos pré-definidos
+
+        private void frmBase_Load(object sender, EventArgs e)
+        {
+            if(!this.DesignMode)
+            {
+             //   this.WindowState = FormWindowState.Maximized;
+             //   this.FormBorderStyle = FormBorderStyle.None;
+             //   this.ShowIcon = false;    //-Na propriedade do form também funciona.
+             //   this.ControlBox = false;  //-Na propriedade do form também funciona.
+             //   this.MaximizeBox = false; //-Na propriedade do form também funciona.
+             //   this.MinimizeBox = false; //-Na propriedade do form também funciona.
+            }
+            this.Text = "Janela " + NumeroDajanela;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (podeFechar())
+            {
+                this.Close();
+            }       
+        }
+                
+        private void frmBase_Shown(object sender, EventArgs e)
+        {          
+            if (!this.DesignMode)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            ReposicionarControles();
+        }
+
+        private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //NumeroDajanela--;
+        }
+
         private void FrmBase_SizeChanged(object sender, EventArgs e)
         {
             ReposicionarControles();
         }
 
-        private void FrmBase_KeyPress(object sender, KeyPressEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (e.KeyChar == 13)
+            if (keyData == (Keys.Enter))
             {
-                e.Handled = true;
-                SendKeys.Send("{tab}");
+                SendKeys.Send("{TAB}");
             }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        #endregion
+
     }
 }

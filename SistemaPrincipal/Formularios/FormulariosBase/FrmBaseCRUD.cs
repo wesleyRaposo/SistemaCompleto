@@ -21,27 +21,6 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             InitializeComponent();
         }
 
-        private void FrmBaseCRUD_Shown(object sender, EventArgs e)
-        {
-            LimparCampos();
-        }
-
-        private void btnGravar_Click(object sender, EventArgs e)
-        {
-            if (PodeGravar())
-            {
-                Gravar();
-            }
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            if (PodeExcluir())
-            {
-                Excluir();
-            }
-        }
-
         #region Métodos a serem herdados.
 
         protected virtual void LimparCampos()
@@ -51,7 +30,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             if (!this.DesignMode)
             {
                 StatusTela = TipoOperacaoCRUD.NaoDefinida;
-            }            
+            }
         }
 
         protected virtual void CarregarCampos()
@@ -60,7 +39,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             //-Deve carregar os campos com os dados vindos da base.
         }
 
-        protected virtual void DefinirStatusDeOpearcao(TipoOperacaoCRUD status) 
+        protected virtual void DefinirStatusDeOpearcao(TipoOperacaoCRUD status)
         {
             StatusTela = status;
 
@@ -92,35 +71,30 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
                         break;
                     }
             }
- 
+
             lblStatusOperacao.Left = pnlFundo.Width - lblStatusOperacao.Width;
         }
 
-        protected virtual bool PodeGravar() 
+        protected virtual bool PodeGravar()
         {
             //-Implementar na herança.
-            return true; 
+            return true;
         }
-        
-        protected virtual void Gravar() 
+
+        protected virtual void Gravar()
         {
             //-Implementar na herança.
         }
 
-        protected virtual bool PodeExcluir() 
+        protected virtual bool PodeExcluir()
         {
             //-Implementar na herança.
-            return true; 
+            return true;
         }
 
-        protected virtual void Excluir() 
-        { 
-            //-Implementar na herança.
-        }
-
-        protected bool ValidaEmail(String email)
+        protected virtual void Excluir()
         {
-            return Funcoes.ValidaEmail(email);
+            //-Implementar na herança.
         }
 
         protected override void ReposicionarControles()
@@ -148,12 +122,25 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
 
 
         #region Eventos pré-definidos
-        private void FrmBaseCRUD_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void FrmBaseCRUD_Shown(object sender, EventArgs e)
         {
-            if (e.KeyChar == 13)
+            LimparCampos();
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            if (PodeGravar())
             {
-                e.Handled = true;
-                SendKeys.Send("{tab}");
+                Gravar();
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (PodeExcluir())
+            {
+                Excluir();
             }
         }
 

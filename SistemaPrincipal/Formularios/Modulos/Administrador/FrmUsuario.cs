@@ -45,7 +45,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
         {
             if (!string.IsNullOrEmpty((sender as TextBox).Text))
             {
-                if (!ValidaEmail((sender as TextBox).Text))
+                if (!Funcoes.ValidaEmail((sender as TextBox).Text))
                 {
                     (sender as TextBox).Focus();
                     MessageBox.Show("Email fora do padrão", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -57,7 +57,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
         {
             if(!string.IsNullOrEmpty((sender as TextBox).Text))
             {
-                if (!ValidaEmail((sender as TextBox).Text))
+                if (!Funcoes.ValidaEmail((sender as TextBox).Text))
                 {
                     (sender as TextBox).Focus();
                     MessageBox.Show("Email fora do padrão", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -79,6 +79,9 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
                 textEmailDeRecuperacao.Clear();
                 textSenha.Clear();
                 textSenhaConfirmacao.Clear();
+                chkEnviarEmailDeConfirmacao.Checked = false;
+                chkExigirConfirmacaoPorEmail.Checked = false;
+                chkExigirConfirmacaoPorEmail.Enabled = false;
 
                 btnExcluir.Enabled = false;
                 btnGravar.Enabled = false;
@@ -104,11 +107,14 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
                     textCodigo.Text = us.Codigo;
                     textNomeCompleto.Text = us.Nome;
                     textNomeSocial.Text = us.NomeSocial;
-                    checkNomeSocialPreferencial.Checked = (us.UsarNomeSocial == "S");
+                    chkNomeSocialPreferencial.Checked = (us.UsarNomeSocial == "S");
                     textEmail.Text = us.Email;
                     textEmailDeRecuperacao.Text = us.EmailRecuperacao;
                     textSenha.Text = us.Senha;
                     textSenhaConfirmacao.Text = us.Senha;
+                    chkEnviarEmailDeConfirmacao.Checked = (us.EnviarEmailCadastramento == "S");
+                    chkExigirConfirmacaoPorEmail.Checked = (us.SolicitarConfirmacaoPorEmail == "S");
+                    chkExigirConfirmacaoPorEmail.Enabled = chkEnviarEmailDeConfirmacao.Checked;
 
                     btnExcluir.Enabled = true;
                     btnGravar.Enabled = true;
@@ -137,11 +143,13 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
                 if (!con.IncluirUsuario(textCodigo.Text,
                                    textNomeCompleto.Text,
                                    textNomeSocial.Text,
-                                   Funcoes.BooleanParaString(checkNomeSocialPreferencial.Checked),
+                                   Funcoes.BooleanParaString(chkNomeSocialPreferencial.Checked),
                                    textEmail.Text,
                                    textEmailDeRecuperacao.Text,
                                    textSenha.Text,
-                                   textSenhaConfirmacao.Text
+                                   textSenhaConfirmacao.Text,
+                                   Funcoes.BooleanParaString(chkEnviarEmailDeConfirmacao.Checked),
+                                   Funcoes.BooleanParaString(chkExigirConfirmacaoPorEmail.Checked)
                                    ))
                 {
                     MessageBox.Show("Um erro ocorreu ao tentar incluir o usuário." + "\r\n" + con.MontarListaDeMensagensComoString());
@@ -158,11 +166,13 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
                                      textCodigo.Text,
                                      textNomeCompleto.Text,
                                      textNomeSocial.Text,
-                                     Funcoes.BooleanParaString(checkNomeSocialPreferencial.Checked),
+                                     Funcoes.BooleanParaString(chkNomeSocialPreferencial.Checked),
                                      textEmail.Text,
                                      textEmailDeRecuperacao.Text,
                                      textSenha.Text,
-                                     textSenhaConfirmacao.Text
+                                     textSenhaConfirmacao.Text,
+                                     Funcoes.BooleanParaString(chkEnviarEmailDeConfirmacao.Checked),
+                                     Funcoes.BooleanParaString(chkExigirConfirmacaoPorEmail.Checked)
                                      ))
                 {
                     MessageBox.Show("Um erro ocorreu ao tentar atualizar o usuário." + "\r\n" + con.MontarListaDeMensagensComoString());
@@ -195,6 +205,28 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
         {            
             textCodigo.Text = con.GerarProximoCodigoDoCliente().ToString();
             textNomeCompleto.Focus();
+        }
+
+        protected override bool PodeGravar()
+        {
+            if (textSenha.Text != textSenhaConfirmacao.Text)
+            {
+                MessageBox.Show("Senha diferente da confirmação.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void chkEnviarEmailDeConfirmacao_Click(object sender, EventArgs e)
+        {
+            if((sender as CheckBox).Checked == false)
+            {
+                chkExigirConfirmacaoPorEmail.Checked = false;
+            }
+            chkExigirConfirmacaoPorEmail.Enabled = (sender as CheckBox).Checked;
         }
     }
 }

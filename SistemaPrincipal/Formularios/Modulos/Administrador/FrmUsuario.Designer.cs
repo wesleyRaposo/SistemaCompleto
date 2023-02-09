@@ -35,7 +35,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             this.btnBusca = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textCodigo = new System.Windows.Forms.TextBox();
-            this.checkNomeSocialPreferencial = new System.Windows.Forms.CheckBox();
+            this.chkNomeSocialPreferencial = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             this.textEmail = new System.Windows.Forms.TextBox();
             this.textNomeSocial = new System.Windows.Forms.TextBox();
             this.textNomeCompleto = new System.Windows.Forms.TextBox();
+            this.chkEnviarEmailDeConfirmacao = new System.Windows.Forms.CheckBox();
+            this.chkExigirConfirmacaoPorEmail = new System.Windows.Forms.CheckBox();
             this.pnlFundo.SuspendLayout();
             this.pnlRodape.SuspendLayout();
             this.pnlCentral.SuspendLayout();
@@ -59,11 +61,11 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             // 
             // pnlFundo
             // 
-            this.pnlFundo.Size = new System.Drawing.Size(725, 599);
+            this.pnlFundo.Size = new System.Drawing.Size(725, 645);
             // 
             // pnlRodape
             // 
-            this.pnlRodape.Location = new System.Drawing.Point(0, 602);
+            this.pnlRodape.Location = new System.Drawing.Point(0, 648);
             this.pnlRodape.Size = new System.Drawing.Size(725, 61);
             // 
             // btnFechar
@@ -72,7 +74,9 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             // 
             // pnlCentral
             // 
-            this.pnlCentral.Controls.Add(this.checkNomeSocialPreferencial);
+            this.pnlCentral.Controls.Add(this.chkExigirConfirmacaoPorEmail);
+            this.pnlCentral.Controls.Add(this.chkEnviarEmailDeConfirmacao);
+            this.pnlCentral.Controls.Add(this.chkNomeSocialPreferencial);
             this.pnlCentral.Controls.Add(this.label8);
             this.pnlCentral.Controls.Add(this.label7);
             this.pnlCentral.Controls.Add(this.label6);
@@ -92,7 +96,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             this.pnlCentral.Controls.Add(this.label1);
             this.pnlCentral.Controls.Add(this.textID);
             this.pnlCentral.Location = new System.Drawing.Point(36, 38);
-            this.pnlCentral.Size = new System.Drawing.Size(640, 528);
+            this.pnlCentral.Size = new System.Drawing.Size(640, 587);
             // 
             // label1
             // 
@@ -154,15 +158,15 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             this.textCodigo.Enter += new System.EventHandler(this.textCodigo_Enter);
             this.textCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCodigo_KeyPress);
             // 
-            // checkNomeSocialPreferencial
+            // chkNomeSocialPreferencial
             // 
-            this.checkNomeSocialPreferencial.AutoSize = true;
-            this.checkNomeSocialPreferencial.Location = new System.Drawing.Point(527, 229);
-            this.checkNomeSocialPreferencial.Name = "checkNomeSocialPreferencial";
-            this.checkNomeSocialPreferencial.Size = new System.Drawing.Size(88, 19);
-            this.checkNomeSocialPreferencial.TabIndex = 43;
-            this.checkNomeSocialPreferencial.Text = "Preferencial";
-            this.checkNomeSocialPreferencial.UseVisualStyleBackColor = true;
+            this.chkNomeSocialPreferencial.AutoSize = true;
+            this.chkNomeSocialPreferencial.Location = new System.Drawing.Point(527, 229);
+            this.chkNomeSocialPreferencial.Name = "chkNomeSocialPreferencial";
+            this.chkNomeSocialPreferencial.Size = new System.Drawing.Size(88, 19);
+            this.chkNomeSocialPreferencial.TabIndex = 43;
+            this.chkNomeSocialPreferencial.Text = "Preferencial";
+            this.chkNomeSocialPreferencial.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -271,11 +275,33 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             this.textNomeCompleto.TabIndex = 41;
             this.textNomeCompleto.Enter += new System.EventHandler(this.textNomeCompleto_Enter);
             // 
+            // chkEnviarEmailDeConfirmacao
+            // 
+            this.chkEnviarEmailDeConfirmacao.AutoSize = true;
+            this.chkEnviarEmailDeConfirmacao.Location = new System.Drawing.Point(20, 511);
+            this.chkEnviarEmailDeConfirmacao.Name = "chkEnviarEmailDeConfirmacao";
+            this.chkEnviarEmailDeConfirmacao.Size = new System.Drawing.Size(274, 19);
+            this.chkEnviarEmailDeConfirmacao.TabIndex = 54;
+            this.chkEnviarEmailDeConfirmacao.Text = "Enviar email de confirmação de cadastramento";
+            this.chkEnviarEmailDeConfirmacao.UseVisualStyleBackColor = true;
+            this.chkEnviarEmailDeConfirmacao.Click += new System.EventHandler(this.chkEnviarEmailDeConfirmacao_Click);
+            // 
+            // chkExigirConfirmacaoPorEmail
+            // 
+            this.chkExigirConfirmacaoPorEmail.AutoSize = true;
+            this.chkExigirConfirmacaoPorEmail.Enabled = false;
+            this.chkExigirConfirmacaoPorEmail.Location = new System.Drawing.Point(46, 544);
+            this.chkExigirConfirmacaoPorEmail.Name = "chkExigirConfirmacaoPorEmail";
+            this.chkExigirConfirmacaoPorEmail.Size = new System.Drawing.Size(242, 19);
+            this.chkExigirConfirmacaoPorEmail.TabIndex = 55;
+            this.chkExigirConfirmacaoPorEmail.Text = "Exigir confirmação de cadastro por email";
+            this.chkExigirConfirmacaoPorEmail.UseVisualStyleBackColor = true;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 663);
+            this.ClientSize = new System.Drawing.Size(725, 709);
             this.Name = "FrmUsuario";
             this.Text = "FormUsuario";
             this.pnlFundo.ResumeLayout(false);
@@ -289,7 +315,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkNomeSocialPreferencial;
+        private System.Windows.Forms.CheckBox chkNomeSocialPreferencial;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -308,5 +334,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
         private System.Windows.Forms.TextBox textCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.CheckBox chkExigirConfirmacaoPorEmail;
+        private System.Windows.Forms.CheckBox chkEnviarEmailDeConfirmacao;
     }
 }
