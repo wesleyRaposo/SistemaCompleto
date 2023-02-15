@@ -81,7 +81,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
              //   this.MaximizeBox = false; //-Na propriedade do form também funciona.
              //   this.MinimizeBox = false; //-Na propriedade do form também funciona.
             }
-            this.Text = "Janela " + NumeroDajanela;
+            this.Text = this.Text +$" (instância {NumeroDajanela})";
         }
 
         private void button1_Click(object sender, EventArgs e)

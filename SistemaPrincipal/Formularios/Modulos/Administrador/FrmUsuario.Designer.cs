@@ -70,7 +70,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(826, 8);
+            this.btnFechar.Location = new System.Drawing.Point(893, 8);
             // 
             // pnlCentral
             // 
@@ -303,7 +303,7 @@ namespace SistemaPrincipal.Formularios.Modulos.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 709);
             this.Name = "FrmUsuario";
-            this.Text = "FormUsuario";
+            this.Text = "Cadastro de Usuários";
             this.pnlFundo.ResumeLayout(false);
             this.pnlFundo.PerformLayout();
             this.pnlRodape.ResumeLayout(false);

@@ -29,16 +29,22 @@ namespace SistemaPrincipal.Formularios.Cadastros
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlFundo.SuspendLayout();
+            this.pnlRodape.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlRodape
-            // 
-            //this.pnlRodape.Location = new System.Drawing.Point(0, 389);
-            //this.pnlRodape.Size = new System.Drawing.Size(800, 61);
             // 
             // pnlFundo
             // 
             this.pnlFundo.Size = new System.Drawing.Size(800, 386);
+            // 
+            // pnlRodape
+            // 
+            this.pnlRodape.Location = new System.Drawing.Point(0, 389);
+            this.pnlRodape.Size = new System.Drawing.Size(800, 61);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Location = new System.Drawing.Point(700, 8);
             // 
             // FrmFilho1
             // 
@@ -46,7 +52,9 @@ namespace SistemaPrincipal.Formularios.Cadastros
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmFilho1";
-            this.Text = "FrmFilho1";
+            this.Text = "Formulário Filho - Exemplo de Herança";
+            this.pnlFundo.ResumeLayout(false);
+            this.pnlRodape.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
