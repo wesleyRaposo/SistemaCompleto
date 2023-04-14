@@ -41,11 +41,11 @@ Sua finalidade é exclusivamente acadêmica.
 
 O objetivo desse mini projeto é dar aos programadores que estejam migrando de alguma linguagem voltada para desktop (como o Delphi) para C# uma referência mínima do uso da linguagem C# em uma aplicação desktop, que já é familiar a estes programadores.
 
-Para quem é "delpheiro", um alerta: tanto a framework quanto os componentes disponibilizados no Windows Forms são INFERIORES ao Delphi, em todos os aspectos.
+Para quem é "delpheiro", um alerta: tanto a framework quanto os componentes disponibilizados para Windows Forms são inferiores ao Delphi em vários aspectos.
 E não me refiro à última versão do Delphi (que nem sei qual é). Refiro-me à boa e velha VCL e as paletas de componentes disponíveis no velhino, mas ainda funcional, "Delphi 7".
 
-Abaixo, uma breve lista do que percebi de ruim no Visual Studio quando o assunto é programção desktop:
-- Quantidade insuficiente de compontentes nativos (comparado ao Delphi, não dá nem para a saída).
+Liste abaixo os pontos que mais me chamaram a atenção no que considero uma inferioridade do Visual Studio quando o assunto é programção desktop, mas com certeza vocês perceberão outras coisas:
+- Quantidade pequena de compontentes nativos (comparado ao Delphi, a diferença é gritante).
 - A herança de formulários é bastante instável, devendo ser usada com muito cuidado. Em alguns casos o form para de renderizar sem nenhuma explicação aparente!
   > Nesses casos, o ideal é limpar a solução, fechar o Visual Studio e reabrí-lo, torcendo para voltar a renderizar.
   > A solução nativa de herança não fica sempre disponível. Em alguns casos, você tem que forçar a herança "no braço", como foi o caso deste projetinho.
@@ -65,14 +65,15 @@ Para os "delpheiros", disponibilizei nesse projeto as seguintes implementações
 - Exemplo de uso de "funções" de forma similar ao Delphi. O C# não tem esse recurso, mas você pode construir uma classe estática e colocar nela diversas funções úteis à sua programação e que não estão disponíveis em objetos (e nem precisam estar). Veja o arquivo "Funcoes.cs".
 - Exemplo de um tipo enumerado (ver arquivo "EnumTipoOperacao.cs").
 - Exemplo de uso de base de dados. No caso, o projeto utiliza uma base de dados local, para não depender de nenhum SGDB externo (ver projeto "CabadaDeConexao").
-- Exemplo de MVC. Esse não é o padrão para desktop adotado pela comunidade C# (e, até o momento da publicação deste documento em nem sei se existe um) mas é uma forma de fazê-lo (simular a uma maneira com a qual trabalhei em Delphi há mais de 15 anos).
-  Esse MVC está estruturado da seguinte forma:
+- Exemplo de MVC. Esse não é o padrão de programação desktop adotado pela comunidade C# mas é uma forma de fazê-lo (similar a uma maneira com a qual trabalhei em Delphi há mais de 15 anos).
+  Ele está estruturado da seguinte forma:
   > O formulário FrmUsuario (no projeto "SistemaPrincipal") é a o "view";
-  > O formulário se comunica com a classe "ControleUsuario", que é o controler (no projeto "RegrasDeNegocio");
+  > O formulário se comunica com a classe "ControleUsuario", que é o controller (no projeto "RegrasDeNegocio");
   > A classe "ControleUsuario" se comunica com os modelos que, no caso, é a classe "Usuario" (no projeto "CamadaDeDados");
-    O controler também se comunica com a camada de conexão (no projeto "CamadaDeConexao"), com as funções utilitárias e o que demais for necessário;
+    O controller também se comunica com a camada de conexão (no projeto "CamadaDeConexao"), com as funções utilitárias e o que demais for necessário;
 - Exemplo do uso do arquivo "App.config". Nesse projeto ele carrega a configuração de acesso à base de dados, que deixa de ser hardcode e passa a ser contida num arquivo editável.  
 
+Em minha época de "delpheiro" (na verdade ainda mexo com a ferramenta) eu também trabalhava com uma classes "gerente" no nosso MVC, que era uma classe de negócio responsável por conectar diferentes controladores e/ou diferentes modelos, ou seja, fazia um encapsulamento de regras de negócio mais complexas. Esse projetinho não contempla esse tipo de implementação, pois seu modesto objetivo é apenas lançar uma base referencial para quem conhece muito pouco ou nada da linguagem C#.
 
 # Status:
 
