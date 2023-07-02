@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,8 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
 
         public FrmBase()
         {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Sessao.ObterInstancia.Idioma);
+
             InitializeComponent();
 
             NumeroDajanela++;
@@ -32,11 +35,13 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         protected virtual void ReposicionarControles()
         {
             //-O reposicionamento de controles não deve ser chamado na criação dos componentes, pois pode provocar erros de referência nula.
-            // Idealmente ele deve ser invocados em eventos do forme, quando em sua exibição ou redimensionamento.
+            // Idealmente ele deve ser invocados em eventos do form, quando em sua exibição ou redimensionamento.
             // Ele deve estar protegido pelo teste (!this.DesignMode) para não correr o crisco de provocar (ainda mais) problemas no mode de design.
 
             if (!this.DesignMode)
             {
+                //this.WindowState = FormWindowState.Maximized;
+
                 int X = pnlRodape.Size.Width - btnFechar.Size.Width - 10;
                 int Y = (pnlRodape.Size.Height / 2) - (btnFechar.Size.Height / 2);
                 btnFechar.Location = new Point(X, Y);
@@ -96,6 +101,7 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
         {          
             if (!this.DesignMode)
             {
+                //this.StartPosition = FormStartPosition.CenterParent;
                 this.WindowState = FormWindowState.Maximized;
             }
             ReposicionarControles();

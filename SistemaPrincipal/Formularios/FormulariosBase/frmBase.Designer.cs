@@ -40,61 +40,39 @@ namespace SistemaPrincipal.Formularios.FormulariosBase
             // 
             // pnlFundo
             // 
-            this.pnlFundo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFundo.AutoScroll = true;
-            this.pnlFundo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.pnlFundo, "pnlFundo");
             this.pnlFundo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlFundo.Controls.Add(this.pnlCentral);
-            this.pnlFundo.Location = new System.Drawing.Point(0, 0);
             this.pnlFundo.Name = "pnlFundo";
-            this.pnlFundo.Size = new System.Drawing.Size(658, 328);
-            this.pnlFundo.TabIndex = 2;
             // 
             // pnlCentral
             // 
+            resources.ApplyResources(this.pnlCentral, "pnlCentral");
             this.pnlCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCentral.Location = new System.Drawing.Point(19, 28);
             this.pnlCentral.Name = "pnlCentral";
-            this.pnlCentral.Size = new System.Drawing.Size(614, 276);
-            this.pnlCentral.TabIndex = 0;
             // 
             // pnlRodape
             // 
+            resources.ApplyResources(this.pnlRodape, "pnlRodape");
             this.pnlRodape.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlRodape.Controls.Add(this.btnFechar);
-            this.pnlRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRodape.Location = new System.Drawing.Point(0, 331);
             this.pnlRodape.Name = "pnlRodape";
-            this.pnlRodape.Size = new System.Drawing.Size(658, 61);
-            this.pnlRodape.TabIndex = 3;
             // 
             // btnFechar
             // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnFechar, "btnFechar");
             this.btnFechar.Image = global::SistemaPrincipal.Properties.Resources.icons8_sair_32;
-            this.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFechar.Location = new System.Drawing.Point(558, 8);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(87, 43);
-            this.btnFechar.TabIndex = 0;
-            this.btnFechar.Text = "&Fechar";
-            this.btnFechar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 392);
             this.Controls.Add(this.pnlRodape);
             this.Controls.Add(this.pnlFundo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBase";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBase";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBase_FormClosed);
             this.Load += new System.EventHandler(this.frmBase_Load);
             this.Shown += new System.EventHandler(this.frmBase_Shown);

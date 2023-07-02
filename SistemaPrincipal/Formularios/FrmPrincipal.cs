@@ -3,34 +3,72 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaPrincipal.Classes;
 using SistemaPrincipal.Formularios.Cadastros;
 using SistemaPrincipal.Formularios.Modulos.Administrador;
 
 namespace SistemaPrincipal.Formularios
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmPrincipal : Form, IEventoAlteracaoIdioma
     {
+        private bool _jaFechou = false;
+        private void MontarIni()
+        {
+            string nomeIni = "Config.ini";
+            string path = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
+            string idioma;
+
+            IniFile arquivoIni = new IniFile(path + "\\" + nomeIni);
+
+            idioma = arquivoIni.ReadValue("CONFIGURACAO", "IDIOMA", "");
+
+            if (string.IsNullOrEmpty(idioma))
+            {
+                arquivoIni.WriteValue("CONFIGURACAO", "IDIOMA", "pt-BR");
+                idioma = "pt-BR";
+            }
+
+            Sessao.ObterInstancia.Idioma = idioma;
+        }
+
+
+        public FrmPrincipal()
+        {
+            MontarIni();
+
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Sessao.ObterInstancia.Idioma);
+
+            InitializeComponent();
+        }
+
         public Boolean fecharAplicacao()
         {
-            if (MessageBox.Show("Deseja fechar a aplicação?",                      //-Mensagem.
-                               "Escolha:",                                         //-Título. 
-                               MessageBoxButtons.YesNo,                            //-Botões de opção.
-                               MessageBoxIcon.Question,                            //-Ícone.
-                               MessageBoxDefaultButton.Button2,                    //-Botão defautl.
-                               0,                                                  //-Ignora MessageBoxOptions
-                               "C:\\Program Files\\Beyond Compare 4\\BCompare.chm" //-Arquivo de ajuda.
-                               ) == DialogResult.Yes)         //-Retorno esperado para tomar ação.
+            if (!_jaFechou) //-"Gambiarra" criada por conta da alteração do idioma do form principal ao fechar o form de mudança de idioma. Quando essa operação é executada, a função de sair entra em loop 3 vezes.
             {
-                return true;
+                if (MessageBox.Show("Deseja fechar a aplicação?",                      //-Mensagem.
+                   "Escolha:",                                         //-Título. 
+                   MessageBoxButtons.YesNo,                            //-Botões de opção.
+                   MessageBoxIcon.Question,                            //-Ícone.
+                   MessageBoxDefaultButton.Button2,                    //-Botão defautl.
+                   0,                                                  //-Ignora MessageBoxOptions
+                   "C:\\Program Files\\Beyond Compare 4\\BCompare.chm" //-Arquivo de ajuda.
+                   ) == DialogResult.Yes)         //-Retorno esperado para tomar ação.
+                {
+                    _jaFechou = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
-            {
-                return false;
-            }
+            else return true;
         }
 
         protected void RestaurarJanelas()
@@ -45,11 +83,6 @@ namespace SistemaPrincipal.Formularios
                     i.WindowState = FormWindowState.Normal;
                 }
             }
-        }
-
-        public FrmPrincipal()
-        {
-            InitializeComponent();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +180,39 @@ namespace SistemaPrincipal.Formularios
             FrmUsuario frm = new FrmUsuario();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void menuIdioma_Click(object sender, EventArgs e)
+        {
+            FrmIdioma frm = new FrmIdioma(this);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void AlterarIdiomaOnline()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Sessao.ObterInstancia.Idioma);
+
+            //-Fecha todas as janelas abertas.
+            foreach (Form i in this.MdiChildren)
+            {
+                if (i.Name != "FrmIdioma")
+                    i.Close();
+            }
+
+            this.Controls.Clear();
+            InitializeComponent();
+            //this.StartPosition = FormStartPosition.CenterParent;
+            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        public void AlterouIdioma(bool idiomaAlterado)
+        {
+            if (idiomaAlterado)
+            {
+                this.AlterarIdiomaOnline();
+            }
         }
     }
 }

@@ -57,4 +57,684 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;lblStatusOperacao.Parent" xml:space="preserve">
+    <value>pnlFundo</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pnlRodape.Size" type="System.Drawing.Size, System.Drawing">
+    <value>725, 61</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;textNomeCompleto.Name" xml:space="preserve">
+    <value>textNomeCompleto</value>
+  </data>
+  <data name="&gt;&gt;textEmailDeRecuperacao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textNomeSocial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 226</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textSenhaConfirmacao.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="chkEnviarEmailDeConfirmacao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 19</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textNomeSocial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 15</value>
+  </data>
+  <data name="textNomeCompleto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>595, 23</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textEmailDeRecuperacao.Name" xml:space="preserve">
+    <value>textEmailDeRecuperacao</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkExigirConfirmacaoPorEmail.Name" xml:space="preserve">
+    <value>chkExigirConfirmacaoPorEmail</value>
+  </data>
+  <data name="&gt;&gt;chkNomeSocialPreferencial.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;lblStatusOperacao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chkNomeSocialPreferencial.Text" xml:space="preserve">
+    <value>Preferencial</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>725, 709</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnObterProximoCodigo.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Email (de recuperação)</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="textNomeSocial.MaxLength" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;textNomeSocial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.Name" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.Name" xml:space="preserve">
+    <value>pnlRodape</value>
+  </data>
+  <data name="&gt;&gt;textCodigo.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="chkEnviarEmailDeConfirmacao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 511</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;textID.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="btnBusca.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 98</value>
+  </data>
+  <data name="&gt;&gt;chkExigirConfirmacaoPorEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textSenhaConfirmacao.Name" xml:space="preserve">
+    <value>textSenhaConfirmacao</value>
+  </data>
+  <data name="textNomeCompleto.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="textCodigo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 99</value>
+  </data>
+  <data name="&gt;&gt;textEmailDeRecuperacao.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="&gt;&gt;textCodigo.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;chkExigirConfirmacaoPorEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatusOperacao.Name" xml:space="preserve">
+    <value>lblStatusOperacao</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textEmailDeRecuperacao.MaxLength" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="chkExigirConfirmacaoPorEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;btnGravar.Parent" xml:space="preserve">
+    <value>pnlRodape</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;textID.Name" xml:space="preserve">
+    <value>textID</value>
+  </data>
+  <data name="textSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 408</value>
+  </data>
+  <data name="&gt;&gt;btnObterProximoCodigo.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 390</value>
+  </data>
+  <data name="pnlCentral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 38</value>
+  </data>
+  <data name="&gt;&gt;btnBusca.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="textNomeCompleto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 166</value>
+  </data>
+  <data name="chkExigirConfirmacaoPorEmail.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textEmail.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnObterProximoCodigo.Text" xml:space="preserve">
+    <value>Próximo Código</value>
+  </data>
+  <data name="textEmailDeRecuperacao.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Name" xml:space="preserve">
+    <value>btnFechar</value>
+  </data>
+  <data name="&gt;&gt;textSenhaConfirmacao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;textEmailDeRecuperacao.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;textSenhaConfirmacao.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="textID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 37</value>
+  </data>
+  <data name="textNomeCompleto.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;textEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnBusca.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;chkEnviarEmailDeConfirmacao.Name" xml:space="preserve">
+    <value>chkEnviarEmailDeConfirmacao</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Nome Completo</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 15</value>
+  </data>
+  <data name="chkNomeSocialPreferencial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 19</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;btnBusca.Name" xml:space="preserve">
+    <value>btnBusca</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnFechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>960, 8</value>
+  </data>
+  <data name="textSenhaConfirmacao.MaxLength" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 286</value>
+  </data>
+  <data name="&gt;&gt;btnExcluir.Parent" xml:space="preserve">
+    <value>pnlRodape</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.Parent" xml:space="preserve">
+    <value>pnlFundo</value>
+  </data>
+  <data name="&gt;&gt;textEmail.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;textCodigo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textCodigo.PlaceholderText" xml:space="preserve">
+    <value>Somente números</value>
+  </data>
+  <data name="textID.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnBusca.Text" xml:space="preserve">
+    <value>F1</value>
+  </data>
+  <data name="&gt;&gt;textNomeSocial.Name" xml:space="preserve">
+    <value>textNomeSocial</value>
+  </data>
+  <data name="chkNomeSocialPreferencial.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmUsuario</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 81</value>
+  </data>
+  <data name="textID.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;chkEnviarEmailDeConfirmacao.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;chkNomeSocialPreferencial.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textNomeCompleto.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnObterProximoCodigo.Name" xml:space="preserve">
+    <value>btnObterProximoCodigo</value>
+  </data>
+  <data name="chkEnviarEmailDeConfirmacao.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="textID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 23</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 15</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 19</value>
+  </data>
+  <data name="btnBusca.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 23</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;btnExcluir.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 15</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="textNomeSocial.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkEnviarEmailDeConfirmacao.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGravar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnExcluir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>SistemaPrincipal.Formularios.FormulariosBase.FrmBaseCRUD, SistemaPrincipal, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblStatusOperacao.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.Name" xml:space="preserve">
+    <value>pnlFundo</value>
+  </data>
+  <data name="&gt;&gt;chkExigirConfirmacaoPorEmail.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;chkNomeSocialPreferencial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="textSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 327</value>
+  </data>
+  <data name="pnlFundo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>725, 645</value>
+  </data>
+  <data name="&gt;&gt;textSenha.Name" xml:space="preserve">
+    <value>textSenha</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 454</value>
+  </data>
+  <data name="&gt;&gt;chkEnviarEmailDeConfirmacao.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Senha (confirmação)</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Parent" xml:space="preserve">
+    <value>pnlRodape</value>
+  </data>
+  <data name="chkNomeSocialPreferencial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 229</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Nome Social</value>
+  </data>
+  <data name="&gt;&gt;btnExcluir.Name" xml:space="preserve">
+    <value>btnExcluir</value>
+  </data>
+  <data name="textEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 23</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 268</value>
+  </data>
+  <data name="&gt;&gt;textNomeSocial.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnObterProximoCodigo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 98</value>
+  </data>
+  <data name="&gt;&gt;textCodigo.Name" xml:space="preserve">
+    <value>textCodigo</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textSenha.MaxLength" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;btnBusca.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="textSenhaConfirmacao.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;textSenha.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 208</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textEmailDeRecuperacao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 345</value>
+  </data>
+  <data name="textSenhaConfirmacao.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;textID.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="lblStatusOperacao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>621, 0</value>
+  </data>
+  <data name="textEmailDeRecuperacao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 23</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chkNomeSocialPreferencial.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;textSenha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 148</value>
+  </data>
+  <data name="&gt;&gt;textSenha.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="chkExigirConfirmacaoPorEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 19</value>
+  </data>
+  <data name="textSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 23</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="textCodigo.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="chkExigirConfirmacaoPorEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 544</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkExigirConfirmacaoPorEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;textNomeCompleto.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="chkExigirConfirmacaoPorEmail.Text" xml:space="preserve">
+    <value>Exigir confirmação de cadastro por email</value>
+  </data>
+  <data name="chkEnviarEmailDeConfirmacao.Text" xml:space="preserve">
+    <value>Enviar email de confirmação de cadastramento</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;chkNomeSocialPreferencial.Name" xml:space="preserve">
+    <value>chkNomeSocialPreferencial</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Cadastro de Usuários</value>
+  </data>
+  <data name="&gt;&gt;chkEnviarEmailDeConfirmacao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textCodigo.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="textID.MaxLength" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="textSenhaConfirmacao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 23</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="pnlCentral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>640, 587</value>
+  </data>
+  <data name="&gt;&gt;btnObterProximoCodigo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textCodigo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 23</value>
+  </data>
+  <data name="&gt;&gt;btnGravar.Name" xml:space="preserve">
+    <value>btnGravar</value>
+  </data>
+  <data name="&gt;&gt;btnBusca.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 15</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnObterProximoCodigo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 23</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;btnObterProximoCodigo.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="textSenhaConfirmacao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 472</value>
+  </data>
+  <data name="pnlRodape.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 648</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;textNomeSocial.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="textEmail.MaxLength" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="&gt;&gt;textEmail.Name" xml:space="preserve">
+    <value>textEmail</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 15</value>
+  </data>
+  <data name="textSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;textNomeCompleto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGravar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>pt-BR</value>
+  </metadata>
 </root>

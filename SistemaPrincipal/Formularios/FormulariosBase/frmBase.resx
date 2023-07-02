@@ -57,7 +57,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlRodape.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmBase</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlFundo.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pnlCentral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 276</value>
+  </data>
+  <data name="btnFechar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="pnlRodape.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.Name" xml:space="preserve">
+    <value>pnlFundo</value>
+  </data>
+  <data name="btnFechar.Text" xml:space="preserve">
+    <value>&amp;Fechar</value>
+  </data>
+  <data name="btnFechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 8</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnFechar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pnlFundo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pnlRodape.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 331</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABMLAAATCwAAAAAAAAAA
@@ -82,4 +132,88 @@
         AAD//wAA//8AAA==
 </value>
   </data>
+  <data name="&gt;&gt;pnlCentral.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>658, 392</value>
+  </data>
+  <data name="pnlFundo.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlCentral.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnFechar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnFechar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 43</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.Parent" xml:space="preserve">
+    <value>pnlFundo</value>
+  </data>
+  <data name="btnFechar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.Name" xml:space="preserve">
+    <value>pnlCentral</value>
+  </data>
+  <data name="pnlCentral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 28</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmBase</value>
+  </data>
+  <data name="pnlFundo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>658, 328</value>
+  </data>
+  <data name="pnlFundo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Name" xml:space="preserve">
+    <value>btnFechar</value>
+  </data>
+  <data name="&gt;&gt;pnlRodape.Name" xml:space="preserve">
+    <value>pnlRodape</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlRodape.Size" type="System.Drawing.Size, System.Drawing">
+    <value>658, 61</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlFundo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Parent" xml:space="preserve">
+    <value>pnlRodape</value>
+  </data>
+  <data name="&gt;&gt;pnlFundo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlCentral.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>pt-BR</value>
+  </metadata>
 </root>

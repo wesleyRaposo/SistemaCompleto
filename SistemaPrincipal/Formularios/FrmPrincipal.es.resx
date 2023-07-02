@@ -57,55 +57,81 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
-    <value>lblHora</value>
-  </data>
-  <data name="&gt;&gt;menuProcessos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuIdioma.Text" xml:space="preserve">
-    <value>&amp;Idiomas</value>
-  </data>
-  <data name="&gt;&gt;menuModelos.Name" xml:space="preserve">
-    <value>menuModelos</value>
-  </data>
-  <data name="&gt;&gt;menuCadastros.Name" xml:space="preserve">
-    <value>menuCadastros</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+  <data name="lblData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
   </data>
-  <data name="&gt;&gt;menuAdministrador.Name" xml:space="preserve">
-    <value>menuAdministrador</value>
+  <data name="lblData.Text" xml:space="preserve">
+    <value>Fecha: 00/00/0000</value>
   </data>
-  <data name="&gt;&gt;stStripPrincipal.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="menuCadastros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
   </data>
-  <data name="&gt;&gt;stStripPrincipal.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="menuCadastros.Text" xml:space="preserve">
+    <value>&amp;Registros</value>
   </data>
-  <data name="&gt;&gt;menuHorizontalmente.Name" xml:space="preserve">
-    <value>menuHorizontalmente</value>
+  <data name="menuProcessos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuProcessos.Text" xml:space="preserve">
+    <value>&amp;Procesos</value>
   </data>
-  <data name="&gt;&gt;timerDataHora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuRelatorios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
   </data>
-  <data name="&gt;&gt;menuUtilitarios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuRelatorios.Text" xml:space="preserve">
+    <value>&amp;Informes</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mnStripFuncoes.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="menuUtilitarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
   </data>
-  <data name="menuAdministrador.Text" xml:space="preserve">
-    <value>Adminstrador</value>
+  <data name="menuUtilitarios.Text" xml:space="preserve">
+    <value>&amp;Utilidades</value>
+  </data>
+  <data name="menuJanelas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="menuJanelas.Text" xml:space="preserve">
+    <value>&amp;Ventanas</value>
+  </data>
+  <data name="menuSair.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="menuSair.Text" xml:space="preserve">
+    <value>&amp;Salir</value>
+  </data>
+  <data name="menuEmCascata.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="menuEmCascata.Text" xml:space="preserve">
+    <value>En cascada</value>
+  </data>
+  <data name="menuHorizontalmente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="menuVerticalmente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 6</value>
+  </data>
+  <data name="menuMinimizarTodas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="menuMinimizarTodas.Text" xml:space="preserve">
+    <value>minimizar Todo</value>
+  </data>
+  <data name="menuRestaurarMinimizadas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="menuRestaurarMinimizadas.Text" xml:space="preserve">
+    <value>Restaurar Minimizado</value>
+  </data>
+  <data name="menuFecharTodas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="menuFecharTodas.Text" xml:space="preserve">
+    <value>Cierra Todo</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -273,302 +299,4 @@
         AAA=
 </value>
   </data>
-  <data name="menuCadastros.Text" xml:space="preserve">
-    <value>&amp;Cadastros</value>
-  </data>
-  <data name="lblData.Text" xml:space="preserve">
-    <value>Data: 00/00/0000</value>
-  </data>
-  <data name="&gt;&gt;menuEmCascata.Name" xml:space="preserve">
-    <value>menuEmCascata</value>
-  </data>
-  <data name="menuOrganizar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuSair.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+F4</value>
-  </data>
-  <data name="menuProcessos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="menuEmCascata.Text" xml:space="preserve">
-    <value>Em Cascata</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="lblData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 17</value>
-  </data>
-  <data name="&gt;&gt;mnStripFuncoes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;stStripPrincipal.Name" xml:space="preserve">
-    <value>stStripPrincipal</value>
-  </data>
-  <data name="&gt;&gt;mnStripFuncoes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;menuVerticalmente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuFecharTodas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuUtilitarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
-  </data>
-  <data name="menuFecharTodas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="&gt;&gt;menuHorizontalmente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Tela Principal</value>
-  </data>
-  <data name="mnStripFuncoes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 24</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
-  </data>
-  <data name="menuRestaurarMinimizadas.Text" xml:space="preserve">
-    <value>Restaurar Minimizadas</value>
-  </data>
-  <data name="&gt;&gt;menuSair.Name" xml:space="preserve">
-    <value>menuSair</value>
-  </data>
-  <data name="lblHora.Text" xml:space="preserve">
-    <value>Hora: 00:00:00</value>
-  </data>
-  <data name="&gt;&gt;menuJanelas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuIdioma.Name" xml:space="preserve">
-    <value>menuIdioma</value>
-  </data>
-  <data name="&gt;&gt;menuRelatorios.Name" xml:space="preserve">
-    <value>menuRelatorios</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuUtilitarios.Text" xml:space="preserve">
-    <value>&amp;Utilitários</value>
-  </data>
-  <data name="stStripPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuSair.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="menuIdioma.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="menuRelatorios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="&gt;&gt;menuAdministrador.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuCadastros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuUtilitarios.Name" xml:space="preserve">
-    <value>menuUtilitarios</value>
-  </data>
-  <data name="&gt;&gt;menuModelos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuEmCascata.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="&gt;&gt;menuUsuarios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 6</value>
-  </data>
-  <data name="menuHorizontalmente.Text" xml:space="preserve">
-    <value>Horizontalmente</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnStripFuncoes.Name" xml:space="preserve">
-    <value>mnStripFuncoes</value>
-  </data>
-  <data name="&gt;&gt;menuMinimizarTodas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuHorizontalmente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="menuSair.Text" xml:space="preserve">
-    <value>&amp;Sair</value>
-  </data>
-  <data name="&gt;&gt;menuRestaurarMinimizadas.Name" xml:space="preserve">
-    <value>menuRestaurarMinimizadas</value>
-  </data>
-  <data name="menuJanelas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 20</value>
-  </data>
-  <data name="&gt;&gt;menuOrganizar.Name" xml:space="preserve">
-    <value>menuOrganizar</value>
-  </data>
-  <data name="&gt;&gt;lblData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
-  </data>
-  <data name="&gt;&gt;lblData.Name" xml:space="preserve">
-    <value>lblData</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FrmPrincipal</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;menuIdioma.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mnStripFuncoes.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="menuMinimizarTodas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="stStripPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 22</value>
-  </data>
-  <data name="&gt;&gt;menuSair.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuFecharTodas.Name" xml:space="preserve">
-    <value>menuFecharTodas</value>
-  </data>
-  <data name="lblBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 17</value>
-  </data>
-  <data name="&gt;&gt;timerDataHora.Name" xml:space="preserve">
-    <value>timerDataHora</value>
-  </data>
-  <data name="stStripPrincipal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 428</value>
-  </data>
-  <data name="menuRelatorios.Text" xml:space="preserve">
-    <value>&amp;Relatórios</value>
-  </data>
-  <data name="&gt;&gt;lblBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuUsuarios.Name" xml:space="preserve">
-    <value>menuUsuarios</value>
-  </data>
-  <data name="&gt;&gt;mnStripFuncoes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblBar.Name" xml:space="preserve">
-    <value>lblBar</value>
-  </data>
-  <data name="menuProcessos.Text" xml:space="preserve">
-    <value>&amp;Processos</value>
-  </data>
-  <data name="menuFecharTodas.Text" xml:space="preserve">
-    <value>Fechar Todas</value>
-  </data>
-  <data name="menuVerticalmente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="menuUsuarios.Text" xml:space="preserve">
-    <value>Usuários</value>
-  </data>
-  <data name="menuCadastros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="menuJanelas.Text" xml:space="preserve">
-    <value>&amp;Janelas</value>
-  </data>
-  <data name="mnStripFuncoes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuModelos.Text" xml:space="preserve">
-    <value>Modelos</value>
-  </data>
-  <data name="&gt;&gt;menuMinimizarTodas.Name" xml:space="preserve">
-    <value>menuMinimizarTodas</value>
-  </data>
-  <data name="&gt;&gt;menuRelatorios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuVerticalmente.Text" xml:space="preserve">
-    <value>Verticalmente</value>
-  </data>
-  <data name="&gt;&gt;menuEmCascata.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuVerticalmente.Name" xml:space="preserve">
-    <value>menuVerticalmente</value>
-  </data>
-  <data name="menuRestaurarMinimizadas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="&gt;&gt;menuRestaurarMinimizadas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="menuUsuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;menuOrganizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="stStripPrincipal.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="menuAdministrador.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="menuModelos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;menuJanelas.Name" xml:space="preserve">
-    <value>menuJanelas</value>
-  </data>
-  <data name="menuOrganizar.Text" xml:space="preserve">
-    <value>Organizar</value>
-  </data>
-  <data name="&gt;&gt;stStripPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuProcessos.Name" xml:space="preserve">
-    <value>menuProcessos</value>
-  </data>
-  <data name="menuMinimizarTodas.Text" xml:space="preserve">
-    <value>Minimizar Todas</value>
-  </data>
-  <metadata name="timerDataHora.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>133, 17</value>
-  </metadata>
-  <metadata name="stStripPrincipal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="mnStripFuncoes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>220, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>pt-BR</value>
-  </metadata>
 </root>
